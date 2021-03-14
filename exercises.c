@@ -61,7 +61,6 @@ typedef struct {
 
 Persona* crearPersona(char nombre[], char rut[], int edad) {
   Persona p;
-  Persona *xd;
   strcpy(p.nombre, nombre);
   strcpy(p.rut, rut);
   p.edad = edad;
@@ -70,8 +69,7 @@ Persona* crearPersona(char nombre[], char rut[], int edad) {
   printf (" rut %s\n", p.rut);
   printf(" edad %d \n", p.edad);
 
-  xd = &p;
-  return xd;
+  return NULL;
 }
 
 /*
@@ -88,7 +86,11 @@ typedef struct {
 } Vector;
 
 Vector * crearVector(int n) {
-   return NULL;
+  Vector *vectorLocal = NULL;
+  if (vectorLocal == NULL) exit(EXIT_FAILURE);
+  vectorLocal = malloc(sizeof(Vector) * n );
+
+   return vectorLocal;
 }
 
 /*
