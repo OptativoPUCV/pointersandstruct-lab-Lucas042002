@@ -82,3 +82,9 @@ Sun Mar 14 23:51:04 UTC 2021:
  tests:  2|1
    [ INFO ] v=crearVector(4)
 8dc2699
+Sun Mar 14 23:55:15 UTC 2021: 
+ exercises.c | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+ tests:  2|5
+total_score: 20/70
+96a9e7f

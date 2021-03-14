@@ -86,11 +86,12 @@ typedef struct {
 } Vector;
 
 Vector * crearVector(int n) {
-  Vector *vectorLocal = NULL;
-  if (vectorLocal == NULL) exit(EXIT_FAILURE);
-  vectorLocal = malloc(sizeof(Vector) * n );
 
-   return vectorLocal;
+  Vector *vectorLocal = NULL;
+  vectorLocal =  malloc(sizeof(Vector) * n );
+  if (vectorLocal == NULL) exit(EXIT_FAILURE);
+
+  return NULL;
 }
 
 /*
