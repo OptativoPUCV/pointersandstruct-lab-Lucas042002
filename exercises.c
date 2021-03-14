@@ -65,7 +65,7 @@ Persona* crearPersona(char nombre[], char rut[], int edad) {
   strcpy(p.rut, rut);
   p.edad = edad;
 
-  printf("\n edad %d ", p.edad);
+  printf(" edad %d \n", p.edad);
 
   return NULL;
 }
