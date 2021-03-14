@@ -69,7 +69,7 @@ Persona* crearPersona(char nombre[], char rut[], int edad) {
   printf (" rut %s\n", p.rut);
   printf(" edad %d \n", p.edad);
 
-  return NULL;
+  return 0;
 }
 
 /*
