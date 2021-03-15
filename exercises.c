@@ -87,11 +87,17 @@ typedef struct {
 
 Vector * crearVector(int n) {
 
-  Vector *vectorLocal = NULL;
+  /*Vector *vectorLocal = NULL;
   vectorLocal = (Vector *) malloc(sizeof(Vector) * n );
-  if (vectorLocal == NULL) exit(EXIT_FAILURE);
+  if (vectorLocal == NULL) exit(EXIT_FAILURE);*/
+  
+  Vector a;
+  a.capacidad = n;
 
-  return vectorLocal;
+  a.datos = (int *) malloc(sizeof(int) * n);
+  if (a.datos == NULL) exit(EXIT_FAILURE);
+
+  return NULL;
 }
 
 /*
@@ -119,6 +125,9 @@ actualiza el vector `c` con el resultado de la suma.
 */
 void sumaV(Vector * a, Vector * b, Vector * c) {
 
+
+
+    
 }
 
 /*
