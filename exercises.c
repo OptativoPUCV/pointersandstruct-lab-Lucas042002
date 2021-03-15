@@ -91,7 +91,7 @@ Vector * crearVector(int n) {
   vectorLocal = (Vector *) malloc(sizeof(Vector) * n );
   if (vectorLocal == NULL) exit(EXIT_FAILURE);
 
-  vectorLocal->capacidad = n;
+  //vectorLocal->capacidad = n;
   
   vectorLocal->datos = (int *) malloc(sizeof(int) * n);
   if (vectorLocal->datos == NULL) exit(EXIT_FAILURE);
