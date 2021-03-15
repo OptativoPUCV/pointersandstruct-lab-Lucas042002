@@ -60,14 +60,17 @@ typedef struct {
 
 
 Persona* crearPersona(char nombre[], char rut[], int edad) {
-  Persona p;
-  strcpy(p.nombre, nombre);
-  strcpy(p.rut, rut);
-  p.edad = edad;
+  Persona *p = NULL;
 
-  printf (" nombre %s\n", p.nombre);
-  printf (" rut %s\n", p.rut);
-  printf(" edad %d \n", p.edad);
+  p = (Persona *) malloc(sizeof(Persona));
+
+  strcpy(p->nombre, nombre);
+  strcpy(p->rut, rut);
+  p->edad = edad;
+
+  printf (" nombre %s\n", p->nombre);
+  printf (" rut %s\n", p->rut);
+  printf(" edad %d \n", p->edad);
 
   return NULL;
 }
@@ -89,13 +92,14 @@ Vector * crearVector(int n) {
 
   /*Vector *vectorLocal = NULL;
   vectorLocal = (Vector *) malloc(sizeof(Vector) * n );
-  if (vectorLocal == NULL) exit(EXIT_FAILURE);*/
+  if (vectorLocal == NULL) exit(EXIT_FAILURE);
   
-  Vector a;
-  a.capacidad = n;
+  Vector tabla;
+  tabla.capacidad = n;
 
-  a.datos = (int *) malloc(sizeof(int) * n);
-  if (a.datos == NULL) exit(EXIT_FAILURE);
+  int *tabla.datos = NULL;
+  tabla.datos = (int *) malloc(sizeof(int) * n);
+  if (tabla.datos == NULL) exit(EXIT_FAILURE);*/
 
   return NULL;
 }
