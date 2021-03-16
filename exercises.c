@@ -121,7 +121,7 @@ int obtenerValor(Vector * v, int i) {
 
   aux = (*v).datos[i];
 
-   return aux;
+  return aux;
 }
 
 /*
@@ -130,10 +130,9 @@ Función que suma los vectores `a` y `b` y
 actualiza el vector `c` con el resultado de la suma.
 */
 void sumaV(Vector * a, Vector * b, Vector * c) {
-
-
-
-    
+  (*c).datos[0] = (*a).datos[0] + (*b).datos[0];
+  (*c).datos[1] = (*a).datos[1] + (*b).datos[1];
+  (*c).datos[2] = (*a).datos[2] + (*b).datos[2];
 }
 
 /*
