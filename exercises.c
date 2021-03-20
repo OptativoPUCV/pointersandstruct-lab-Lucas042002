@@ -132,9 +132,9 @@ Función que suma los vectores `a` y `b` y
 actualiza el vector `c` con el resultado de la suma.
 */
 void sumaV(Vector * a, Vector * b, Vector * c) {
-  (*c).datos[0] = (*a).datos[0] + (*b).datos[0];
-  (*c).datos[1] = (*a).datos[1] + (*b).datos[1];
-  (*c).datos[2] = (*a).datos[2] + (*b).datos[2];
+  for (int i = 0 ; i < (*a).capacidad ; i++){
+    (*c).datos[i] = (*a).datos[i] + (*b).datos[i];
+  }
 }
 
 /*
@@ -143,9 +143,11 @@ Use las operaciones implementadas de vectores para
 sumar (a1,a2)+(b1+b2). Almacene el resultado en el vector c.
 */
 void sumaV2(int a1, int a2, int b1, int b2, Vector *c){
-  int suma1, suma2;
-  suma (a1, b1, &suma1);
-  suma (a2, b2, &suma2);
-  (*c).datos[0] = suma1;
-  (*c).datos[1] = suma2;
+  Vector *vectorA = crearVector(2);
+  Vector *vectorB = crearVector(2);
+  asignarValor(vectorA, 0, a1);
+  asignarValor(vectorA, 1, a2);
+  asignarValor(vectorB, 0, b1);
+  asignarValor(vectorB, 1, b2);
+  sumaV(vectorA, vectorB, c);
 }
